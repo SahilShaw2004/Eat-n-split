@@ -123,8 +123,13 @@ form {
   padding: 1.2rem;
 }
 .form-split-bill {
-  grid-template-columns: 1fr 12rem;
+  display: grid;
+  grid-template-columns: 1fr 12rem; /* Default layout for larger screens */
+  gap: 1rem;
   padding: 3.2rem 4rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 label {
@@ -166,4 +171,45 @@ form h2 {
   text-transform: uppercase;
   letter-spacing: -0.5px;
   margin-bottom: 1.6rem;
+}
+@media (max-width: 768px) {
+  .app {
+    
+    display: block !important;
+    column-gap: 4rem;
+    align-items: start;
+  }
+  .form-split-bill {
+    margin-top: 7rem !important;
+    grid-template-columns: 1fr; /* Switch to a single column layout */
+    padding: 2rem;
+  }
+
+  .form-split-bill h2 {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-split-bill input,
+  .form-split-bill select,
+  .form-split-bill button {
+    width: 100%; /* Full width for better touch control */
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+
+  .form-split-bill button {
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+
+  .form-split-bill button:hover {
+    background-color: #45a049;
+  }
 }
