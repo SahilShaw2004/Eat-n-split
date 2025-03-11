@@ -124,7 +124,7 @@ form {
 }
 .form-split-bill {
   display: grid;
-  grid-template-columns: 1fr 12rem; /* Default layout for larger screens */
+  
   gap: 1rem;
   padding: 3.2rem 4rem;
   background-color: #f9f9f9;
@@ -181,7 +181,6 @@ form h2 {
   }
   .form-split-bill {
     margin-top: 7rem !important;
-    grid-template-columns: 1fr; /* Switch to a single column layout */
     padding: 2rem;
   }
 
